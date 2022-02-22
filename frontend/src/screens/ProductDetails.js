@@ -1,16 +1,22 @@
-import { Container } from "react-bootstrap"
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from "react"
+import { Link, useParams } from 'react-router-dom'
 import { Row, Col, Card, Image, ListGroup, Button} from 'react-bootstrap'
-import products from "../products"
 import Rating from "../components/Rating"
+
+import axios from 'axios'
 
 
 const ProductDetails = () => {
   const params = useParams()
-  const navigate = useNavigate()
   const usdToInrFactor = 74.68
-  const product = products.find(p => p._id === params.id)
-
+  const [product, setProduct] = useState([])
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${params.id}`)
+      setProduct(data)
+    }
+    fetchProduct()
+  }, [])
   return (
     <>
         <Link className='btn btn-outline-dark my-3' to='/'>
