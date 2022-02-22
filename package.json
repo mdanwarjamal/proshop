@@ -1,0 +1,31 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "An eCommerce application built using MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdanwarjamal/proshop.git"
+  },
+  "keywords": [
+    "MERN",
+    "React",
+    "Node.js",
+    "eCommerce",
+    "Full",
+    "Stack"
+  ],
+  "author": "Md Anwar Jamal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdanwarjamal/proshop/issues"
+  },
+  "homepage": "https://github.com/mdanwarjamal/proshop#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
